@@ -34,10 +34,12 @@ struct ContentView: View {
                                 isPositivePromtViewPresented = false
                                 isNegativePromtViewPresented = false
                             }
-
                         }
                     NegativePromtView()
-                        .frame(height: isNegativePromtViewPresented ? 800 : screenHeight / 2 - 70, alignment: .bottom)
+                        .frame(
+                            height: isNegativePromtViewPresented ? 800 : screenHeight / 2 - 70,
+                            alignment: .bottom
+                        )
                         .padding(.top, -50)
                         .ignoresSafeArea()
                         .onTapGesture {
@@ -47,7 +49,14 @@ struct ContentView: View {
                                 isChooseModelPresented = isNegativePromtViewPresented
                             }
                         }
-                    PositivePromtView(viewModel: viewModel)
+                    PositivePromtView(viewModel: viewModel, didStartEditing: {
+                        guard !isPositivePromtViewPresented else { return }
+                        withAnimation {
+                            isPositivePromtViewPresented.toggle()
+                            isNegativePromtViewPresented = false
+                            isChooseModelPresented = isPositivePromtViewPresented
+                        }
+                    }, isPresented: $isPositivePromtViewPresented)
                         .frame(height: isPositivePromtViewPresented ? 800 : screenHeight / 2 - 140)
                         .padding(.top, -50)
                         .onTapGesture {
@@ -55,6 +64,9 @@ struct ContentView: View {
                                 isPositivePromtViewPresented.toggle()
                                 isNegativePromtViewPresented = false
                                 isChooseModelPresented = isPositivePromtViewPresented
+                                if !isPositivePromtViewPresented {
+                                // TODO: - Make hide keyboard
+                                }
                             }
                         }
                 }

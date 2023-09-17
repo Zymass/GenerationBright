@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Tag: Identifiable, Hashable {
+struct Promt: Identifiable, Hashable {
     var id: UUID = .init()
     var value: String
     var isInitial: Bool = false

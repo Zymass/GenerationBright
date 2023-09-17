@@ -10,13 +10,20 @@ import Combine
 
 struct PositivePromtView: View {
 
-    private let viewModel: GenerationViewModelProtocol
+    @ObservedObject private var viewModel: GenerationViewModel
     private var cancellables = Set<AnyCancellable>()
-    @State var positivePromts = [PromtCollectionItem]()
-    @State private var tags: [Tag] = []
+    private var didStartEditing: (() -> Void)?
+    @Binding private var isPresented: Bool
+    @State private var promts: [Promt] = []
 
-    init(viewModel: GenerationViewModelProtocol) {
+    init(
+        viewModel: GenerationViewModel,
+        didStartEditing: (() -> Void)? = nil,
+        isPresented: Binding<Bool>
+    ) {
         self.viewModel = viewModel
+        self.didStartEditing = didStartEditing
+        _isPresented = isPresented
     }
 
     var body: some View {
@@ -42,22 +49,10 @@ struct PositivePromtView: View {
                         .padding()
                         .opacity(0.6)
                 }
-                TagField(tags: $tags)
+                PromtField(promts: $viewModel.positivePromts, isPresented: $isPresented, didStartEditing: didStartEditing)
                 .padding()
                 Spacer()
             }
         }
-        .onReceive(viewModel.positivePromts) { _ in
-            withAnimation {
-                positivePromts = viewModel.positivePromts.value
-            }
-        }
-    }
-}
-
-struct PromtView_Previews: PreviewProvider {
-    static var previews: some View {
-        let viewModel = GenerationViewModel()
-        PositivePromtView(viewModel: viewModel)
     }
 }

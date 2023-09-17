@@ -7,17 +7,20 @@
 
 import SwiftUI
 
-struct TagField: View {
-    @Binding var tags: [Tag]
+struct PromtField: View {
+    @Binding var promts: [Promt]
+    @Binding var isPresented: Bool
+    var didStartEditing: (() -> Void)?
+
     var body: some View {
-        TagLayout(alignment: .leading) {
-            ForEach($tags) { $tag in
-                TagView(tag: $tag, allTags: $tags)
+        PromtLayout(alignment: .leading) {
+            ForEach($promts) { $tag in
+                PromtView(didStartEditing: didStartEditing, isPresented: $isPresented, promt: $tag, allPromts: $promts)
                     .onChange(of: tag.value) { newValue in
                         if newValue.last == "," {
                             tag.value.removeLast()
                             if !tag.value.isEmpty {
-                                tags.append(.init(value: ""))
+                                promts.append(.init(value: ""))
                             }
                         }
                     }
@@ -28,67 +31,72 @@ struct TagField: View {
         .padding(.horizontal, 15)
         .background(.bar, in: RoundedRectangle(cornerRadius: 12))
         .onAppear {
-            if tags.isEmpty {
-                tags.append(.init(value: "", isInitial: true))
+            if promts.isEmpty {
+                promts.append(.init(value: "", isInitial: true))
             }
         }
-        .onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardWillHideNotification), perform: { _ in
-            if let lastTag = tags.last, !lastTag.value.isEmpty {
-                tags.append(.init(value: "", isInitial: true))
+        .onReceive(
+            NotificationCenter.default.publisher(for: UIResponder.keyboardWillHideNotification),
+            perform: { _ in
+            if let lastTag = promts.last, !lastTag.value.isEmpty {
+                promts.append(.init(value: "", isInitial: true))
             }
         })
     }
 }
 
-fileprivate struct TagView: View {
-    @Binding var tag: Tag
-    @Binding var allTags: [Tag]
+fileprivate struct PromtView: View {
+    var didStartEditing: (() -> Void)?
+    @Binding var isPresented: Bool
+    @Binding var promt: Promt
+    @Binding var allPromts: [Promt]
     @FocusState private var isFocused: Bool
     @Environment(\.colorScheme) private var colorScheme
     var body: some View {
-        BackSpaceListnerTextField(hint: "Tag", text: $tag.value, onBackPressed: {
-            if allTags.count > 1 {
-                if tag.value.isEmpty {
-                    allTags.removeAll(where: { $0.id == tag.id })
-                    if let lastIndex = allTags.indices.last {
-                        allTags[lastIndex].isInitial = false
+        BackSpaceListnerTextField(hint: "Tag", text: $promt.value, onBackPressed: {
+            if allPromts.count > 1 {
+                if promt.value.isEmpty {
+                    allPromts.removeAll(where: { $0.id == promt.id })
+                    if let lastIndex = allPromts.indices.last {
+                        allPromts[lastIndex].isInitial = false
                     }
                 }
             }
         })
         .focused($isFocused)
-        .padding(.horizontal, isFocused || tag.value.isEmpty ? 0 : 10)
+        .padding(.horizontal, isFocused || promt.value.isEmpty ? 0 : 10)
         .padding(.vertical, 10)
         .background(
-            (colorScheme == .dark ? Color.black : Color.white).opacity(isFocused || tag.value.isEmpty ? 0 : 1),
+            (colorScheme == .dark ? Color.black : Color.white).opacity(isFocused || promt.value.isEmpty ? 0 : 1),
             in: RoundedRectangle(cornerRadius: 5)
         )
-        .disabled(tag.isInitial)
-        .onChange(of: allTags, perform: { newValue in
-            if newValue.last?.id == tag.id && !(newValue.last?.isInitial ?? false) && !isFocused {
-                print("🙏tag.value: \(tag.value)🙏")
-                print("🙏tag.isFocused: \(tag.isFocused)🙏")
-                print("🙏isFocused: \(isFocused)🙏")
+        .disabled(promt.isInitial)
+        .onChange(of: allPromts, perform: { newValue in
+            if newValue.last?.id == promt.id && !(newValue.last?.isInitial ?? false) && !isFocused {
                 isFocused = true
             }
         })
         .overlay {
-            if tag.isInitial {
+            if promt.isInitial {
                 Rectangle()
                     .fill(.clear)
                     .contentShape(Rectangle())
                     .onTapGesture {
-                        if allTags.last?.id == tag.id {
-                            tag.isInitial = false
+                        if allPromts.last?.id == promt.id {
+                            promt.isInitial = false
                             isFocused = true
+                            didStartEditing?()
                         }
                     }
             }
         }
         .onChange(of: isFocused) { newValue in
             if !isFocused {
-                tag.isInitial = true
+                promt.isInitial = true
             }
+        }
+        .onChange(of: isPresented) { newValue in
+            isFocused = newValue
         }
     }
 }

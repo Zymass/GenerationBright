@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TagLayout: Layout {
+struct PromtLayout: Layout {
     /// Layout Properties
     var alignment: Alignment = .center
     /// Both Horizontal & Vertical

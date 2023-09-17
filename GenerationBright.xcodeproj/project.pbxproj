@@ -12,9 +12,9 @@
 		9F02CB582AAF9FD5000D7850 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F02CB572AAF9FD5000D7850 /* Assets.xcassets */; };
 		9F02CB5B2AAF9FD5000D7850 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F02CB5A2AAF9FD5000D7850 /* Preview Assets.xcassets */; };
 		9F02CB622AAFA2AC000D7850 /* PositivePromtView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F02CB612AAFA2AC000D7850 /* PositivePromtView.swift */; };
-		9F2739C62AB6CFD100FA5B34 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2739C52AB6CFD100FA5B34 /* Tag.swift */; };
-		9F2739CA2AB6D08D00FA5B34 /* TagField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2739C92AB6D08D00FA5B34 /* TagField.swift */; };
-		9F2739CC2AB6FCED00FA5B34 /* TagLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2739CB2AB6FCED00FA5B34 /* TagLayout.swift */; };
+		9F2739C62AB6CFD100FA5B34 /* Promt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2739C52AB6CFD100FA5B34 /* Promt.swift */; };
+		9F2739CA2AB6D08D00FA5B34 /* PromtView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2739C92AB6D08D00FA5B34 /* PromtView.swift */; };
+		9F2739CC2AB6FCED00FA5B34 /* PromtLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2739CB2AB6FCED00FA5B34 /* PromtLayout.swift */; };
 		9F7E932C2AB0E40E00582E35 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7E932B2AB0E40E00582E35 /* File.swift */; };
 		9F7E932F2AB0E66300582E35 /* NegativePromtView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7E932E2AB0E66300582E35 /* NegativePromtView.swift */; };
 		9F7E93312AB0E68400582E35 /* ChooseModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7E93302AB0E68400582E35 /* ChooseModelView.swift */; };
@@ -31,9 +31,9 @@
 		9F02CB572AAF9FD5000D7850 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F02CB5A2AAF9FD5000D7850 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9F02CB612AAFA2AC000D7850 /* PositivePromtView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositivePromtView.swift; sourceTree = "<group>"; };
-		9F2739C52AB6CFD100FA5B34 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
-		9F2739C92AB6D08D00FA5B34 /* TagField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagField.swift; sourceTree = "<group>"; };
-		9F2739CB2AB6FCED00FA5B34 /* TagLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagLayout.swift; sourceTree = "<group>"; };
+		9F2739C52AB6CFD100FA5B34 /* Promt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promt.swift; sourceTree = "<group>"; };
+		9F2739C92AB6D08D00FA5B34 /* PromtView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromtView.swift; sourceTree = "<group>"; };
+		9F2739CB2AB6FCED00FA5B34 /* PromtLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromtLayout.swift; sourceTree = "<group>"; };
 		9F7E932B2AB0E40E00582E35 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		9F7E932E2AB0E66300582E35 /* NegativePromtView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NegativePromtView.swift; sourceTree = "<group>"; };
 		9F7E93302AB0E68400582E35 /* ChooseModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseModelView.swift; sourceTree = "<group>"; };
@@ -93,19 +93,19 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		9F2739C22AB6CFAD00FA5B34 /* TextTag */ = {
+		9F2739C22AB6CFAD00FA5B34 /* PromtTagView */ = {
 			isa = PBXGroup;
 			children = (
-				9F2739CB2AB6FCED00FA5B34 /* TagLayout.swift */,
-				9F2739C92AB6D08D00FA5B34 /* TagField.swift */,
+				9F2739CB2AB6FCED00FA5B34 /* PromtLayout.swift */,
+				9F2739C92AB6D08D00FA5B34 /* PromtView.swift */,
 			);
-			path = TextTag;
+			path = PromtTagView;
 			sourceTree = "<group>";
 		};
 		9F2739C32AB6CFC000FA5B34 /* Modes */ = {
 			isa = PBXGroup;
 			children = (
-				9F2739C52AB6CFD100FA5B34 /* Tag.swift */,
+				9F2739C52AB6CFD100FA5B34 /* Promt.swift */,
 			);
 			path = Modes;
 			sourceTree = "<group>";
@@ -141,7 +141,7 @@
 		9F7E93352AB0F55100582E35 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				9F2739C22AB6CFAD00FA5B34 /* TextTag */,
+				9F2739C22AB6CFAD00FA5B34 /* PromtTagView */,
 				9F7E93362AB0F56400582E35 /* ShareButton.swift */,
 				9FD87AD52AB2251B0021D5F9 /* PromtCollectionItem.swift */,
 			);
@@ -220,16 +220,16 @@
 			files = (
 				9F02CB622AAFA2AC000D7850 /* PositivePromtView.swift in Sources */,
 				9F7E932C2AB0E40E00582E35 /* File.swift in Sources */,
-				9F2739CC2AB6FCED00FA5B34 /* TagLayout.swift in Sources */,
+				9F2739CC2AB6FCED00FA5B34 /* PromtLayout.swift in Sources */,
 				9F02CB562AAF9FD4000D7850 /* ContentView.swift in Sources */,
 				9F7E93372AB0F56400582E35 /* ShareButton.swift in Sources */,
 				9F7E93332AB0F32300582E35 /* MainCreateImageView.swift in Sources */,
 				9FD87AD62AB2251B0021D5F9 /* PromtCollectionItem.swift in Sources */,
-				9F2739C62AB6CFD100FA5B34 /* Tag.swift in Sources */,
+				9F2739C62AB6CFD100FA5B34 /* Promt.swift in Sources */,
 				9FD87AD92AB23DEA0021D5F9 /* GenerationViewModel.swift in Sources */,
 				9F02CB542AAF9FD4000D7850 /* GenerationBrightApp.swift in Sources */,
 				9F7E932F2AB0E66300582E35 /* NegativePromtView.swift in Sources */,
-				9F2739CA2AB6D08D00FA5B34 /* TagField.swift in Sources */,
+				9F2739CA2AB6D08D00FA5B34 /* PromtView.swift in Sources */,
 				9F7E93312AB0E68400582E35 /* ChooseModelView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
