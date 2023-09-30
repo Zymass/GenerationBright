@@ -14,12 +14,12 @@ struct PromtField: View {
 
     var body: some View {
         PromtLayout(alignment: .leading) {
-            ForEach($promts) { $tag in
-                PromtView(didStartEditing: didStartEditing, isPresented: $isPresented, promt: $tag, allPromts: $promts)
-                    .onChange(of: tag.value) { newValue in
+            ForEach($promts) { $prompt in
+                PromtView(didStartEditing: didStartEditing, isPresented: $isPresented, promt: $prompt, allPromts: $promts)
+                    .onChange(of: prompt.value) { newValue in
                         if newValue.last == "," {
-                            tag.value.removeLast()
-                            if !tag.value.isEmpty {
+                            prompt.value.removeLast()
+                            if !prompt.value.isEmpty {
                                 promts.append(.init(value: ""))
                             }
                         }
