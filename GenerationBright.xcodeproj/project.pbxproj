@@ -15,6 +15,11 @@
 		9F2739C62AB6CFD100FA5B34 /* Promt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2739C52AB6CFD100FA5B34 /* Promt.swift */; };
 		9F2739CA2AB6D08D00FA5B34 /* PromtView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2739C92AB6D08D00FA5B34 /* PromtView.swift */; };
 		9F2739CC2AB6FCED00FA5B34 /* PromtLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2739CB2AB6FCED00FA5B34 /* PromtLayout.swift */; };
+		9F41AB572ABA17C4001A28C8 /* TextToImageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F41AB562ABA17C4001A28C8 /* TextToImageRequest.swift */; };
+		9F724DE42AB76FC1007CE864 /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F724DE32AB76FC1007CE864 /* MainButton.swift */; };
+		9F724DE72AB77D94007CE864 /* TextToImageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F724DE62AB77D94007CE864 /* TextToImageResponse.swift */; };
+		9F724DE92AB77FF8007CE864 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F724DE82AB77FF8007CE864 /* NetworkManager.swift */; };
+		9F724DEC2AB78081007CE864 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9F724DEB2AB78081007CE864 /* Alamofire */; };
 		9F7E932C2AB0E40E00582E35 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7E932B2AB0E40E00582E35 /* File.swift */; };
 		9F7E932F2AB0E66300582E35 /* NegativePromtView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7E932E2AB0E66300582E35 /* NegativePromtView.swift */; };
 		9F7E93312AB0E68400582E35 /* ChooseModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7E93302AB0E68400582E35 /* ChooseModelView.swift */; };
@@ -34,6 +39,10 @@
 		9F2739C52AB6CFD100FA5B34 /* Promt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promt.swift; sourceTree = "<group>"; };
 		9F2739C92AB6D08D00FA5B34 /* PromtView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromtView.swift; sourceTree = "<group>"; };
 		9F2739CB2AB6FCED00FA5B34 /* PromtLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromtLayout.swift; sourceTree = "<group>"; };
+		9F41AB562ABA17C4001A28C8 /* TextToImageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToImageRequest.swift; sourceTree = "<group>"; };
+		9F724DE32AB76FC1007CE864 /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
+		9F724DE62AB77D94007CE864 /* TextToImageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToImageResponse.swift; sourceTree = "<group>"; };
+		9F724DE82AB77FF8007CE864 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		9F7E932B2AB0E40E00582E35 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		9F7E932E2AB0E66300582E35 /* NegativePromtView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NegativePromtView.swift; sourceTree = "<group>"; };
 		9F7E93302AB0E68400582E35 /* ChooseModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseModelView.swift; sourceTree = "<group>"; };
@@ -48,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F724DEC2AB78081007CE864 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +67,7 @@
 		9F02CB472AAF9FD4000D7850 = {
 			isa = PBXGroup;
 			children = (
+				9F41AB562ABA17C4001A28C8 /* TextToImageRequest.swift */,
 				9F02CB522AAF9FD4000D7850 /* GenerationBright */,
 				9F02CB512AAF9FD4000D7850 /* Products */,
 			);
@@ -75,6 +86,7 @@
 			children = (
 				9F02CB532AAF9FD4000D7850 /* GenerationBrightApp.swift */,
 				9F02CB552AAF9FD4000D7850 /* ContentView.swift */,
+				9F724DE52AB77D77007CE864 /* Services */,
 				9F7E932D2AB0E64900582E35 /* Screens */,
 				9F7E93352AB0F55100582E35 /* Components */,
 				9F2739C32AB6CFC000FA5B34 /* Modes */,
@@ -110,6 +122,15 @@
 			path = Modes;
 			sourceTree = "<group>";
 		};
+		9F724DE52AB77D77007CE864 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9F724DE62AB77D94007CE864 /* TextToImageResponse.swift */,
+				9F724DE82AB77FF8007CE864 /* NetworkManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		9F7E932A2AB0E40500582E35 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,8 +151,8 @@
 		9F7E93342AB0F35D00582E35 /* GenerateImageSettings */ = {
 			isa = PBXGroup;
 			children = (
-				9F02CB612AAFA2AC000D7850 /* PositivePromtView.swift */,
 				9FD87AD82AB23DEA0021D5F9 /* GenerationViewModel.swift */,
+				9F02CB612AAFA2AC000D7850 /* PositivePromtView.swift */,
 				9F7E932E2AB0E66300582E35 /* NegativePromtView.swift */,
 				9F7E93302AB0E68400582E35 /* ChooseModelView.swift */,
 			);
@@ -143,6 +164,7 @@
 			children = (
 				9F2739C22AB6CFAD00FA5B34 /* PromtTagView */,
 				9F7E93362AB0F56400582E35 /* ShareButton.swift */,
+				9F724DE32AB76FC1007CE864 /* MainButton.swift */,
 				9FD87AD52AB2251B0021D5F9 /* PromtCollectionItem.swift */,
 			);
 			path = Components;
@@ -164,6 +186,9 @@
 			dependencies = (
 			);
 			name = GenerationBright;
+			packageProductDependencies = (
+				9F724DEB2AB78081007CE864 /* Alamofire */,
+			);
 			productName = GenerationBright;
 			productReference = 9F02CB502AAF9FD4000D7850 /* GenerationBright.app */;
 			productType = "com.apple.product-type.application";
@@ -192,6 +217,9 @@
 				Base,
 			);
 			mainGroup = 9F02CB472AAF9FD4000D7850;
+			packageReferences = (
+				9F724DEA2AB78081007CE864 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 9F02CB512AAF9FD4000D7850 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -220,11 +248,15 @@
 			files = (
 				9F02CB622AAFA2AC000D7850 /* PositivePromtView.swift in Sources */,
 				9F7E932C2AB0E40E00582E35 /* File.swift in Sources */,
+				9F724DE42AB76FC1007CE864 /* MainButton.swift in Sources */,
+				9F724DE72AB77D94007CE864 /* TextToImageResponse.swift in Sources */,
+				9F724DE92AB77FF8007CE864 /* NetworkManager.swift in Sources */,
 				9F2739CC2AB6FCED00FA5B34 /* PromtLayout.swift in Sources */,
 				9F02CB562AAF9FD4000D7850 /* ContentView.swift in Sources */,
 				9F7E93372AB0F56400582E35 /* ShareButton.swift in Sources */,
 				9F7E93332AB0F32300582E35 /* MainCreateImageView.swift in Sources */,
 				9FD87AD62AB2251B0021D5F9 /* PromtCollectionItem.swift in Sources */,
+				9F41AB572ABA17C4001A28C8 /* TextToImageRequest.swift in Sources */,
 				9F2739C62AB6CFD100FA5B34 /* Promt.swift in Sources */,
 				9FD87AD92AB23DEA0021D5F9 /* GenerationViewModel.swift in Sources */,
 				9F02CB542AAF9FD4000D7850 /* GenerationBrightApp.swift in Sources */,
@@ -365,8 +397,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -394,8 +425,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -431,6 +461,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9F724DEA2AB78081007CE864 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9F724DEB2AB78081007CE864 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9F724DEA2AB78081007CE864 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9F02CB482AAF9FD4000D7850 /* Project object */;
 }

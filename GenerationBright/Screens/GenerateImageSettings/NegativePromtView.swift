@@ -8,6 +8,28 @@
 import SwiftUI
 
 struct NegativePromtView: View {
+
+    // MARK: - Private Properties
+
+    @ObservedObject private var viewModel: GenerationViewModel
+    @Binding private var isPresented: Bool
+    @State private var promts: [Promt] = []
+    private var didStartEditing: (() -> Void)?
+
+    // MARK: - Init
+
+    init(
+        viewModel: GenerationViewModel,
+        didStartEditing: (() -> Void)? = nil,
+        isPresented: Binding<Bool>
+    ) {
+        self.viewModel = viewModel
+        self.didStartEditing = didStartEditing
+        _isPresented = isPresented
+    }
+
+    // MARK: - Body
+    
     var body: some View {
         ZStack {
             Rectangle()
@@ -31,14 +53,11 @@ struct NegativePromtView: View {
                         .padding()
                         .opacity(0.6)
                 }
+                PromtField(promts: $viewModel.negativePromts, isPresented: $isPresented, didStartEditing: didStartEditing)
+                .padding()
+                .opacity(isPresented ? 1 : 0)
                 Spacer()
             }
         }
-    }
-}
-
-struct NegativePromtView_Previews: PreviewProvider {
-    static var previews: some View {
-        NegativePromtView()
     }
 }

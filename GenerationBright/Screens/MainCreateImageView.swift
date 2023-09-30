@@ -8,23 +8,28 @@
 import SwiftUI
 
 struct MainCreateImageView: View {
+
+    @ObservedObject var viewModel: GenerationViewModel
+
     var body: some View {
         ZStack {
-            Image("image")
-                .resizable()
-                .scaledToFill()
-                .ignoresSafeArea()
-                .frame(
-                    width: .infinity,
-                    height: UIScreen.main.bounds.height / 2,
-                    alignment: .top
-                )
+            AsyncImage(url: URL(string: viewModel.textToImageUrl)) { image in
+                image
+                    .resizable()
+                    .scaledToFit()
+                    .ignoresSafeArea()
+                    .clipShape(RoundedRectangle(cornerRadius: 60))
+                    .padding()
+                    .shadow(color: .black, radius: 20, x: 10, y: 10)
+            } placeholder: {
+                Image("image")
+                    .resizable()
+                    .scaledToFit()
+                    .ignoresSafeArea()
+                    .clipShape(RoundedRectangle(cornerRadius: 60))
+                    .padding()
+                    .shadow(color: .black, radius: 20, x: 10, y: 10)
+            }
         }
-    }
-}
-
-struct MainCreateImageView_Previews: PreviewProvider {
-    static var previews: some View {
-        MainCreateImageView()
     }
 }

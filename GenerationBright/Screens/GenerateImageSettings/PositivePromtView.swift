@@ -6,15 +6,17 @@
 //
 
 import SwiftUI
-import Combine
 
 struct PositivePromtView: View {
 
+    // MARK: - Private Properties
+
     @ObservedObject private var viewModel: GenerationViewModel
-    private var cancellables = Set<AnyCancellable>()
-    private var didStartEditing: (() -> Void)?
     @Binding private var isPresented: Bool
     @State private var promts: [Promt] = []
+    private var didStartEditing: (() -> Void)?
+
+    // MARK: - Init
 
     init(
         viewModel: GenerationViewModel,
@@ -25,6 +27,8 @@ struct PositivePromtView: View {
         self.didStartEditing = didStartEditing
         _isPresented = isPresented
     }
+
+    // MARK: - Body
 
     var body: some View {
         ZStack {
@@ -51,6 +55,7 @@ struct PositivePromtView: View {
                 }
                 PromtField(promts: $viewModel.positivePromts, isPresented: $isPresented, didStartEditing: didStartEditing)
                 .padding()
+                .opacity(isPresented ? 1 : 0)
                 Spacer()
             }
         }
