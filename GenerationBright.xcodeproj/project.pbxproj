@@ -25,6 +25,8 @@
 		9F7E93312AB0E68400582E35 /* ChooseModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7E93302AB0E68400582E35 /* ChooseModelView.swift */; };
 		9F7E93332AB0F32300582E35 /* MainCreateImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7E93322AB0F32300582E35 /* MainCreateImageView.swift */; };
 		9F7E93372AB0F56400582E35 /* ShareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7E93362AB0F56400582E35 /* ShareButton.swift */; };
+		9F9B52CF2AC894A000D0A5C7 /* FetchImageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9B52CE2AC894A000D0A5C7 /* FetchImageResponse.swift */; };
+		9F9B52D12AC894BC00D0A5C7 /* FetchImageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9B52D02AC894BC00D0A5C7 /* FetchImageRequest.swift */; };
 		9FD87AD62AB2251B0021D5F9 /* PromtCollectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD87AD52AB2251B0021D5F9 /* PromtCollectionItem.swift */; };
 		9FD87AD92AB23DEA0021D5F9 /* GenerationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD87AD82AB23DEA0021D5F9 /* GenerationViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -48,6 +50,8 @@
 		9F7E93302AB0E68400582E35 /* ChooseModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseModelView.swift; sourceTree = "<group>"; };
 		9F7E93322AB0F32300582E35 /* MainCreateImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCreateImageView.swift; sourceTree = "<group>"; };
 		9F7E93362AB0F56400582E35 /* ShareButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareButton.swift; sourceTree = "<group>"; };
+		9F9B52CE2AC894A000D0A5C7 /* FetchImageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchImageResponse.swift; sourceTree = "<group>"; };
+		9F9B52D02AC894BC00D0A5C7 /* FetchImageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchImageRequest.swift; sourceTree = "<group>"; };
 		9FD87AD52AB2251B0021D5F9 /* PromtCollectionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromtCollectionItem.swift; sourceTree = "<group>"; };
 		9FD87AD82AB23DEA0021D5F9 /* GenerationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,7 +71,6 @@
 		9F02CB472AAF9FD4000D7850 = {
 			isa = PBXGroup;
 			children = (
-				9F41AB562ABA17C4001A28C8 /* TextToImageRequest.swift */,
 				9F02CB522AAF9FD4000D7850 /* GenerationBright */,
 				9F02CB512AAF9FD4000D7850 /* Products */,
 			);
@@ -125,7 +128,8 @@
 		9F724DE52AB77D77007CE864 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				9F724DE62AB77D94007CE864 /* TextToImageResponse.swift */,
+				9F9B52CD2AC8948A00D0A5C7 /* Responses */,
+				9F9B52CC2AC8948500D0A5C7 /* Requests */,
 				9F724DE82AB77FF8007CE864 /* NetworkManager.swift */,
 			);
 			path = Services;
@@ -168,6 +172,24 @@
 				9FD87AD52AB2251B0021D5F9 /* PromtCollectionItem.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		9F9B52CC2AC8948500D0A5C7 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				9F41AB562ABA17C4001A28C8 /* TextToImageRequest.swift */,
+				9F9B52D02AC894BC00D0A5C7 /* FetchImageRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		9F9B52CD2AC8948A00D0A5C7 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				9F724DE62AB77D94007CE864 /* TextToImageResponse.swift */,
+				9F9B52CE2AC894A000D0A5C7 /* FetchImageResponse.swift */,
+			);
+			path = Responses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,9 +278,11 @@
 				9F7E93372AB0F56400582E35 /* ShareButton.swift in Sources */,
 				9F7E93332AB0F32300582E35 /* MainCreateImageView.swift in Sources */,
 				9FD87AD62AB2251B0021D5F9 /* PromtCollectionItem.swift in Sources */,
+				9F9B52D12AC894BC00D0A5C7 /* FetchImageRequest.swift in Sources */,
 				9F41AB572ABA17C4001A28C8 /* TextToImageRequest.swift in Sources */,
 				9F2739C62AB6CFD100FA5B34 /* Promt.swift in Sources */,
 				9FD87AD92AB23DEA0021D5F9 /* GenerationViewModel.swift in Sources */,
+				9F9B52CF2AC894A000D0A5C7 /* FetchImageResponse.swift in Sources */,
 				9F02CB542AAF9FD4000D7850 /* GenerationBrightApp.swift in Sources */,
 				9F7E932F2AB0E66300582E35 /* NegativePromtView.swift in Sources */,
 				9F2739CA2AB6D08D00FA5B34 /* PromtView.swift in Sources */,

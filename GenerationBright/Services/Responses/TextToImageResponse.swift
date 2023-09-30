@@ -49,10 +49,3 @@ struct MetaText: Decodable {
         case filePrefix = "file_prefix"
     }
 }
-
-struct FetchImageResponse: Decodable {
-    let status: String
-    let id: Int
-    let output: [String]
-    let message: String?
-}

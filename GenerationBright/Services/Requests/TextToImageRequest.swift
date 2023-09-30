@@ -72,8 +72,3 @@ struct TextToImageRequest: Codable {
         case scheduler
     }
 }
-
-struct FetchImageRequest: Codable {
-    var key: String
-    var requestId: String
-}
