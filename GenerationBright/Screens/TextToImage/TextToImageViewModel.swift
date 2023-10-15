@@ -1,5 +1,5 @@
 //
-//  GenerationViewModel.swift
+//  TextToImageViewModel.swift
 //  GenerationBright
 //
 //  Created by Ilia Filiaev on 13.09.2023.
@@ -22,7 +22,7 @@ enum StableDiffusionModels: String {
     case realistic = "realistic-vision-v40"
 }
 
-final class GenerationViewModel: ObservableObject {
+final class TextToImageViewModel: ObservableObject {
     var positivePromts: [Promt] = []
     var negativePromts: [Promt] = []
     @Published var textToImageUrl: String = ""

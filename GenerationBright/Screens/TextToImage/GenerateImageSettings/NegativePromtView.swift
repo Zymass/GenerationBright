@@ -11,7 +11,7 @@ struct NegativePromtView: View {
 
     // MARK: - Private Properties
 
-    @ObservedObject private var viewModel: GenerationViewModel
+    @ObservedObject private var viewModel: TextToImageViewModel
     @Binding private var isPresented: Bool
     @State private var promts: [Promt] = []
     private var didStartEditing: (() -> Void)?
@@ -19,7 +19,7 @@ struct NegativePromtView: View {
     // MARK: - Init
 
     init(
-        viewModel: GenerationViewModel,
+        viewModel: TextToImageViewModel,
         didStartEditing: (() -> Void)? = nil,
         isPresented: Binding<Bool>
     ) {

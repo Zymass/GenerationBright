@@ -16,6 +16,8 @@
 		9F2739CA2AB6D08D00FA5B34 /* PromtView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2739C92AB6D08D00FA5B34 /* PromtView.swift */; };
 		9F2739CC2AB6FCED00FA5B34 /* PromtLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2739CB2AB6FCED00FA5B34 /* PromtLayout.swift */; };
 		9F41AB572ABA17C4001A28C8 /* TextToImageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F41AB562ABA17C4001A28C8 /* TextToImageRequest.swift */; };
+		9F5274C92AC9B87500401068 /* TelegramStickersImport in Frameworks */ = {isa = PBXBuildFile; productRef = 9F5274C82AC9B87500401068 /* TelegramStickersImport */; };
+		9F5274CC2AC9B89F00401068 /* CreateStickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5274CB2AC9B89F00401068 /* CreateStickerView.swift */; };
 		9F724DE42AB76FC1007CE864 /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F724DE32AB76FC1007CE864 /* MainButton.swift */; };
 		9F724DE72AB77D94007CE864 /* TextToImageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F724DE62AB77D94007CE864 /* TextToImageResponse.swift */; };
 		9F724DE92AB77FF8007CE864 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F724DE82AB77FF8007CE864 /* NetworkManager.swift */; };
@@ -23,12 +25,19 @@
 		9F7E932C2AB0E40E00582E35 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7E932B2AB0E40E00582E35 /* File.swift */; };
 		9F7E932F2AB0E66300582E35 /* NegativePromtView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7E932E2AB0E66300582E35 /* NegativePromtView.swift */; };
 		9F7E93312AB0E68400582E35 /* ChooseModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7E93302AB0E68400582E35 /* ChooseModelView.swift */; };
-		9F7E93332AB0F32300582E35 /* MainCreateImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7E93322AB0F32300582E35 /* MainCreateImageView.swift */; };
+		9F7E93332AB0F32300582E35 /* CreatedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7E93322AB0F32300582E35 /* CreatedImageView.swift */; };
 		9F7E93372AB0F56400582E35 /* ShareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7E93362AB0F56400582E35 /* ShareButton.swift */; };
 		9F9B52CF2AC894A000D0A5C7 /* FetchImageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9B52CE2AC894A000D0A5C7 /* FetchImageResponse.swift */; };
 		9F9B52D12AC894BC00D0A5C7 /* FetchImageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9B52D02AC894BC00D0A5C7 /* FetchImageRequest.swift */; };
+		9F9B52D32AC8953900D0A5C7 /* ImageToImageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9B52D22AC8953900D0A5C7 /* ImageToImageRequest.swift */; };
+		9F9B52D52AC8A29D00D0A5C7 /* UploadImageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9B52D42AC8A29D00D0A5C7 /* UploadImageRequest.swift */; };
+		9F9B52D72AC8A58100D0A5C7 /* TextToImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9B52D62AC8A58100D0A5C7 /* TextToImageView.swift */; };
+		9F9B52DB2AC8A61C00D0A5C7 /* ImageToImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9B52DA2AC8A61C00D0A5C7 /* ImageToImageView.swift */; };
+		9F9B52DD2AC8A91600D0A5C7 /* ImageToImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9B52DC2AC8A91600D0A5C7 /* ImageToImageViewModel.swift */; };
+		9F9B52DF2AC8AA3000D0A5C7 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9B52DE2AC8AA3000D0A5C7 /* Media.swift */; };
+		9F9B52E12AC8ADCC00D0A5C7 /* UploadImageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9B52E02AC8ADCC00D0A5C7 /* UploadImageResponse.swift */; };
 		9FD87AD62AB2251B0021D5F9 /* PromtCollectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD87AD52AB2251B0021D5F9 /* PromtCollectionItem.swift */; };
-		9FD87AD92AB23DEA0021D5F9 /* GenerationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD87AD82AB23DEA0021D5F9 /* GenerationViewModel.swift */; };
+		9FD87AD92AB23DEA0021D5F9 /* TextToImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD87AD82AB23DEA0021D5F9 /* TextToImageViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,18 +51,26 @@
 		9F2739C92AB6D08D00FA5B34 /* PromtView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromtView.swift; sourceTree = "<group>"; };
 		9F2739CB2AB6FCED00FA5B34 /* PromtLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromtLayout.swift; sourceTree = "<group>"; };
 		9F41AB562ABA17C4001A28C8 /* TextToImageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToImageRequest.swift; sourceTree = "<group>"; };
+		9F5274CB2AC9B89F00401068 /* CreateStickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateStickerView.swift; sourceTree = "<group>"; };
 		9F724DE32AB76FC1007CE864 /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
 		9F724DE62AB77D94007CE864 /* TextToImageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToImageResponse.swift; sourceTree = "<group>"; };
 		9F724DE82AB77FF8007CE864 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		9F7E932B2AB0E40E00582E35 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		9F7E932E2AB0E66300582E35 /* NegativePromtView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NegativePromtView.swift; sourceTree = "<group>"; };
 		9F7E93302AB0E68400582E35 /* ChooseModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseModelView.swift; sourceTree = "<group>"; };
-		9F7E93322AB0F32300582E35 /* MainCreateImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCreateImageView.swift; sourceTree = "<group>"; };
+		9F7E93322AB0F32300582E35 /* CreatedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatedImageView.swift; sourceTree = "<group>"; };
 		9F7E93362AB0F56400582E35 /* ShareButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareButton.swift; sourceTree = "<group>"; };
 		9F9B52CE2AC894A000D0A5C7 /* FetchImageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchImageResponse.swift; sourceTree = "<group>"; };
 		9F9B52D02AC894BC00D0A5C7 /* FetchImageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchImageRequest.swift; sourceTree = "<group>"; };
+		9F9B52D22AC8953900D0A5C7 /* ImageToImageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageToImageRequest.swift; sourceTree = "<group>"; };
+		9F9B52D42AC8A29D00D0A5C7 /* UploadImageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageRequest.swift; sourceTree = "<group>"; };
+		9F9B52D62AC8A58100D0A5C7 /* TextToImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToImageView.swift; sourceTree = "<group>"; };
+		9F9B52DA2AC8A61C00D0A5C7 /* ImageToImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageToImageView.swift; sourceTree = "<group>"; };
+		9F9B52DC2AC8A91600D0A5C7 /* ImageToImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageToImageViewModel.swift; sourceTree = "<group>"; };
+		9F9B52DE2AC8AA3000D0A5C7 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
+		9F9B52E02AC8ADCC00D0A5C7 /* UploadImageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageResponse.swift; sourceTree = "<group>"; };
 		9FD87AD52AB2251B0021D5F9 /* PromtCollectionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromtCollectionItem.swift; sourceTree = "<group>"; };
-		9FD87AD82AB23DEA0021D5F9 /* GenerationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationViewModel.swift; sourceTree = "<group>"; };
+		9FD87AD82AB23DEA0021D5F9 /* TextToImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToImageViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F5274C92AC9B87500401068 /* TelegramStickersImport in Frameworks */,
 				9F724DEC2AB78081007CE864 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -121,8 +139,17 @@
 			isa = PBXGroup;
 			children = (
 				9F2739C52AB6CFD100FA5B34 /* Promt.swift */,
+				9F9B52DE2AC8AA3000D0A5C7 /* Media.swift */,
 			);
 			path = Modes;
+			sourceTree = "<group>";
+		};
+		9F5274CA2AC9B88F00401068 /* CreateStickers */ = {
+			isa = PBXGroup;
+			children = (
+				9F5274CB2AC9B89F00401068 /* CreateStickerView.swift */,
+			);
+			path = CreateStickers;
 			sourceTree = "<group>";
 		};
 		9F724DE52AB77D77007CE864 /* Services */ = {
@@ -146,8 +173,9 @@
 		9F7E932D2AB0E64900582E35 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				9F7E93342AB0F35D00582E35 /* GenerateImageSettings */,
-				9F7E93322AB0F32300582E35 /* MainCreateImageView.swift */,
+				9F5274CA2AC9B88F00401068 /* CreateStickers */,
+				9F9B52D92AC8A60900D0A5C7 /* ImageToImage */,
+				9F9B52D82AC8A5F800D0A5C7 /* TextToImage */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -155,7 +183,6 @@
 		9F7E93342AB0F35D00582E35 /* GenerateImageSettings */ = {
 			isa = PBXGroup;
 			children = (
-				9FD87AD82AB23DEA0021D5F9 /* GenerationViewModel.swift */,
 				9F02CB612AAFA2AC000D7850 /* PositivePromtView.swift */,
 				9F7E932E2AB0E66300582E35 /* NegativePromtView.swift */,
 				9F7E93302AB0E68400582E35 /* ChooseModelView.swift */,
@@ -178,7 +205,9 @@
 			isa = PBXGroup;
 			children = (
 				9F41AB562ABA17C4001A28C8 /* TextToImageRequest.swift */,
+				9F9B52D22AC8953900D0A5C7 /* ImageToImageRequest.swift */,
 				9F9B52D02AC894BC00D0A5C7 /* FetchImageRequest.swift */,
+				9F9B52D42AC8A29D00D0A5C7 /* UploadImageRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -188,8 +217,29 @@
 			children = (
 				9F724DE62AB77D94007CE864 /* TextToImageResponse.swift */,
 				9F9B52CE2AC894A000D0A5C7 /* FetchImageResponse.swift */,
+				9F9B52E02AC8ADCC00D0A5C7 /* UploadImageResponse.swift */,
 			);
 			path = Responses;
+			sourceTree = "<group>";
+		};
+		9F9B52D82AC8A5F800D0A5C7 /* TextToImage */ = {
+			isa = PBXGroup;
+			children = (
+				9F9B52D62AC8A58100D0A5C7 /* TextToImageView.swift */,
+				9FD87AD82AB23DEA0021D5F9 /* TextToImageViewModel.swift */,
+				9F7E93322AB0F32300582E35 /* CreatedImageView.swift */,
+				9F7E93342AB0F35D00582E35 /* GenerateImageSettings */,
+			);
+			path = TextToImage;
+			sourceTree = "<group>";
+		};
+		9F9B52D92AC8A60900D0A5C7 /* ImageToImage */ = {
+			isa = PBXGroup;
+			children = (
+				9F9B52DA2AC8A61C00D0A5C7 /* ImageToImageView.swift */,
+				9F9B52DC2AC8A91600D0A5C7 /* ImageToImageViewModel.swift */,
+			);
+			path = ImageToImage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +260,7 @@
 			name = GenerationBright;
 			packageProductDependencies = (
 				9F724DEB2AB78081007CE864 /* Alamofire */,
+				9F5274C82AC9B87500401068 /* TelegramStickersImport */,
 			);
 			productName = GenerationBright;
 			productReference = 9F02CB502AAF9FD4000D7850 /* GenerationBright.app */;
@@ -241,6 +292,7 @@
 			mainGroup = 9F02CB472AAF9FD4000D7850;
 			packageReferences = (
 				9F724DEA2AB78081007CE864 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				9F5274C72AC9B87500401068 /* XCRemoteSwiftPackageReference "TelegramStickersImport" */,
 			);
 			productRefGroup = 9F02CB512AAF9FD4000D7850 /* Products */;
 			projectDirPath = "";
@@ -268,22 +320,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F9B52DB2AC8A61C00D0A5C7 /* ImageToImageView.swift in Sources */,
 				9F02CB622AAFA2AC000D7850 /* PositivePromtView.swift in Sources */,
 				9F7E932C2AB0E40E00582E35 /* File.swift in Sources */,
 				9F724DE42AB76FC1007CE864 /* MainButton.swift in Sources */,
+				9F9B52DF2AC8AA3000D0A5C7 /* Media.swift in Sources */,
 				9F724DE72AB77D94007CE864 /* TextToImageResponse.swift in Sources */,
 				9F724DE92AB77FF8007CE864 /* NetworkManager.swift in Sources */,
 				9F2739CC2AB6FCED00FA5B34 /* PromtLayout.swift in Sources */,
 				9F02CB562AAF9FD4000D7850 /* ContentView.swift in Sources */,
+				9F9B52D72AC8A58100D0A5C7 /* TextToImageView.swift in Sources */,
 				9F7E93372AB0F56400582E35 /* ShareButton.swift in Sources */,
-				9F7E93332AB0F32300582E35 /* MainCreateImageView.swift in Sources */,
+				9F7E93332AB0F32300582E35 /* CreatedImageView.swift in Sources */,
+				9F9B52DD2AC8A91600D0A5C7 /* ImageToImageViewModel.swift in Sources */,
 				9FD87AD62AB2251B0021D5F9 /* PromtCollectionItem.swift in Sources */,
 				9F9B52D12AC894BC00D0A5C7 /* FetchImageRequest.swift in Sources */,
 				9F41AB572ABA17C4001A28C8 /* TextToImageRequest.swift in Sources */,
 				9F2739C62AB6CFD100FA5B34 /* Promt.swift in Sources */,
-				9FD87AD92AB23DEA0021D5F9 /* GenerationViewModel.swift in Sources */,
+				9F9B52E12AC8ADCC00D0A5C7 /* UploadImageResponse.swift in Sources */,
+				9FD87AD92AB23DEA0021D5F9 /* TextToImageViewModel.swift in Sources */,
+				9F9B52D32AC8953900D0A5C7 /* ImageToImageRequest.swift in Sources */,
 				9F9B52CF2AC894A000D0A5C7 /* FetchImageResponse.swift in Sources */,
+				9F5274CC2AC9B89F00401068 /* CreateStickerView.swift in Sources */,
 				9F02CB542AAF9FD4000D7850 /* GenerationBrightApp.swift in Sources */,
+				9F9B52D52AC8A29D00D0A5C7 /* UploadImageRequest.swift in Sources */,
 				9F7E932F2AB0E66300582E35 /* NegativePromtView.swift in Sources */,
 				9F2739CA2AB6D08D00FA5B34 /* PromtView.swift in Sources */,
 				9F7E93312AB0E68400582E35 /* ChooseModelView.swift in Sources */,
@@ -487,6 +547,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		9F5274C72AC9B87500401068 /* XCRemoteSwiftPackageReference "TelegramStickersImport" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/TelegramMessenger/TelegramStickersImport.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
 		9F724DEA2AB78081007CE864 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -498,6 +566,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		9F5274C82AC9B87500401068 /* TelegramStickersImport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9F5274C72AC9B87500401068 /* XCRemoteSwiftPackageReference "TelegramStickersImport" */;
+			productName = TelegramStickersImport;
+		};
 		9F724DEB2AB78081007CE864 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 9F724DEA2AB78081007CE864 /* XCRemoteSwiftPackageReference "Alamofire" */;

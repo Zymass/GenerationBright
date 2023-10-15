@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct MainCreateImageView: View {
+struct CreatedImageView: View {
 
-    @ObservedObject var viewModel: GenerationViewModel
+    @ObservedObject var viewModel: TextToImageViewModel
 
     var body: some View {
         ZStack {
